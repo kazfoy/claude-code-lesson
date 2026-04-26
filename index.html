@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アラーム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="clock" id="clock">00:00:00</div>
+
+    <div class="alarm-section">
+      <label for="alarmTime">アラーム時刻</label>
+      <input type="time" id="alarmTime" />
+      <button id="toggleBtn" class="btn set">セット</button>
+    </div>
+
+    <div class="status" id="status">アラームは設定されていません</div>
+
+    <div class="modal hidden" id="modal">
+      <div class="modal-box">
+        <p>⏰ アラーム！</p>
+        <button class="btn stop" id="stopBtn">止める</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="beep" loop>
+    <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAA..." type="audio/wav" />
+  </audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
